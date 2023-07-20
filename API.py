@@ -32,7 +32,7 @@ def putData(data:contact):
 def getData(user: str):
     l = contacts.find_one({"user":user},{"_id":0})
     if l!=None:
-        return l["contacts"]
+        return {l["contacts"]}
     
     return {"contacts":[]}
 
