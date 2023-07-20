@@ -36,5 +36,3 @@ def getData(user: str):
     
     return {"contacts":[]}
 
-
-contacts.update_one({"user":"akshun"},{"$set":{"contacts":["9444052933"]}})
