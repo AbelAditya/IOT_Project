@@ -32,9 +32,9 @@ def putData(data:contact):
 def getData(user: str):
     l = contacts.find_one({"user":user},{"_id":0})
     if l!=None:
-        return {"data":l}
+        return l["contacts"]
     
-    return {"user":user,"contacts":[]}
+    return {"contacts":[]}
 
 
 contacts.update_one({"user":"akshun"},{"$set":{"contacts":["9444052933"]}})
